@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="TECHNEXT TECHNOLOGIES – Premium website development, software development, digital marketing, branding, and intelligent business solutions based in Wayanad, Kerala." />
+  <meta name="keywords" content="TECHNEXT TECHNOLOGIES, website development, software development, digital marketing, branding, graphic design, Wayanad, Kerala" />
+  <meta name="author" content="TECHNEXT TECHNOLOGIES" />
+  <meta property="og:title" content="TECHNEXT TECHNOLOGIES – Crafting Refined Digital Experiences" />
+  <meta property="og:description" content="We help businesses grow through innovative technology solutions, premium design, and strategic digital services." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.technexttechnologies.in" />
+  <title>TECHNEXT TECHNOLOGIES | Crafting Refined Digital Experiences</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Custom Cursor (desktop only) -->
+  <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+  <div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+
+  <!-- ═══════════════════════════════════════════════
+       NAVIGATION
+  ═══════════════════════════════════════════════ -->
+  <nav class="nav" id="mainNav" role="navigation" aria-label="Main navigation">
+    <div class="nav-container">
+
+      <a href="#home" class="nav-logo" aria-label="TECHNEXT TECHNOLOGIES — scroll to top">
+        <img
+          src="https://res.cloudinary.com/dwzerbhuj/image/upload/q_auto/f_auto/v1776917252/Untitled-2_gx7mta.png"
+          alt="TECHNEXT TECHNOLOGIES"
+          class="nav-logo-img"
+          width="152"
+          height="42"
+          loading="eager"
+          fetchpriority="high"
+          decoding="async"
+        />
+      </a>
+
+      <ul class="nav-links" id="navLinks" role="list">
+        <li><a href="#home"    class="nav-link" data-nav>Home</a></li>
+        <li><a href="#about"   class="nav-link" data-nav>About Us</a></li>
+        <li><a href="#services"class="nav-link" data-nav>Services</a></li>
+        <li><a href="#why"     class="nav-link" data-nav>Why TECHNEXT</a></li>
+        <li><a href="#contact" class="nav-link" data-nav>Contact</a></li>
+        <li><a href="https://sites.google.com/view/technexttechnologies/staff-login?authuser=0"
+               class="nav-link" target="_blank" rel="noopener noreferrer">Staff Login</a></li>
+        <li>
+          <a href="https://sites.google.com/view/technexttechnologies/appointment_1?authuser=0"
+             class="nav-cta" target="_blank" rel="noopener noreferrer">
+            <span class="nav-cta-inner">Appointment</span>
+          </a>
+        </li>
+      </ul>
+
+      <button class="nav-toggle" id="navToggle"
+              aria-label="Toggle navigation menu" aria-expanded="false">
+        <span class="toggle-bar"></span>
+        <span class="toggle-bar"></span>
+        <span class="toggle-bar"></span>
+      </button>
+    </div>
+
+    <!-- Active-section underline pill -->
+    <div class="nav-indicator" id="navIndicator" aria-hidden="true"></div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-overlay" id="mobileOverlay" aria-hidden="true">
+    <div class="mobile-overlay-bg" aria-hidden="true"></div>
+    <div class="mobile-menu" role="dialog" aria-modal="true" aria-label="Navigation menu">
+      <div class="mobile-menu-logo">
+        <img
+          src="https://res.cloudinary.com/dwzerbhuj/image/upload/q_auto/f_auto/v1776917252/Untitled-2_gx7mta.png"
+          alt="TECHNEXT TECHNOLOGIES"
+          width="136"
+          loading="lazy"
+        />
+      </div>
+      <ul role="list">
+        <li><a href="#home"    class="mobile-link" data-mobile-nav>Home</a></li>
+        <li><a href="#about"   class="mobile-link" data-mobile-nav>About Us</a></li>
+        <li><a href="#services"class="mobile-link" data-mobile-nav>Services</a></li>
+        <li><a href="#why"     class="mobile-link" data-mobile-nav>Why TECHNEXT</a></li>
+        <li><a href="#contact" class="mobile-link" data-mobile-nav>Contact</a></li>
+        <li><a href="https://sites.google.com/view/technexttechnologies/staff-login?authuser=0"
+               class="mobile-link" target="_blank" rel="noopener noreferrer">Staff Login</a></li>
+        <li>
+          <a href="https://sites.google.com/view/technexttechnologies/appointment_1?authuser=0"
+             class="mobile-cta" target="_blank" rel="noopener noreferrer">Book Appointment</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════
+       HERO
+  ═══════════════════════════════════════════════ -->
+  <section class="hero" id="home" aria-label="Hero banner">
+    <div class="hero-bg" aria-hidden="true">
+      <canvas class="hero-canvas" id="heroCanvas"></canvas>
+      <div class="hero-mesh"></div>
+      <div class="hero-spotlight"></div>
+      <div class="hero-orb orb-1"></div>
+      <div class="hero-orb orb-2"></div>
+      <div class="hero-orb orb-3"></div>
+      <div class="hero-grid"></div>
+      <div class="hero-grain"></div>
+    </div>
+
+    <div class="hero-content">
+      <div class="hero-eyebrow hero-anim" style="--hd:0.05s">
+        <span class="eyebrow-pip" aria-hidden="true"></span>
+        <span>Premium Technology Agency</span>
+        <span class="eyebrow-pip" aria-hidden="true"></span>
+      </div>
+
+      <h1 class="hero-headline hero-anim" style="--hd:0.2s">
+        Crafting Refined<br>
+        <em>Digital Experiences</em><br>
+        &amp; Intelligent Business<br>Solutions
+      </h1>
+
+      <p class="hero-description hero-anim" style="--hd:0.4s">
+        We help businesses grow through innovative technology solutions, premium
+        design, and strategic digital services. Our focus is on creating impactful
+        digital experiences that elevate brands and drive measurable results.
+      </p>
+
+      <div class="hero-actions hero-anim" style="--hd:0.55s">
+        <a href="https://sites.google.com/view/technexttechnologies/appointment_1?authuser=0"
+           class="btn-primary touch-target" target="_blank" rel="noopener noreferrer">
+          <span>Book Appointment</span>
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor"
+                  stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+        <a href="#services" class="btn-ghost touch-target">
+          <span>Explore Services</span>
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+            <path d="M7 2v10M3 8l4 4 4-4" stroke="currentColor"
+                  stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </div>
+
+      <div class="hero-trust hero-anim" style="--hd:0.7s">
+        <span class="trust-dot" aria-hidden="true"></span>
+        <span>50+ Projects Delivered</span>
+        <span class="trust-sep" aria-hidden="true"></span>
+        <span>30+ Happy Clients</span>
+        <span class="trust-sep" aria-hidden="true"></span>
+        <span>Since 2024</span>
+      </div>
+    </div>
+
+    <div class="hero-scroll" aria-hidden="true">
+      <div class="scroll-track"><div class="scroll-thumb"></div></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       STATS BAR
+  ═══════════════════════════════════════════════ -->
+  <section class="stats-bar" aria-label="Company statistics">
+    <div class="stats-glow" aria-hidden="true"></div>
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item reveal-up">
+          <div class="stat-num-wrap">
+            <span class="stat-number" data-count="50">0</span><span class="stat-suf">+</span>
+          </div>
+          <span class="stat-label">Projects Delivered</span>
+        </div>
+        <div class="stat-divider" aria-hidden="true"></div>
+        <div class="stat-item reveal-up" style="--delay:0.08s">
+          <div class="stat-num-wrap">
+            <span class="stat-number" data-count="30">0</span><span class="stat-suf">+</span>
+          </div>
+          <span class="stat-label">Happy Clients</span>
+        </div>
+        <div class="stat-divider" aria-hidden="true"></div>
+        <div class="stat-item reveal-up" style="--delay:0.16s">
+          <div class="stat-num-wrap">
+            <span class="stat-number" data-count="8">0</span><span class="stat-suf"></span>
+          </div>
+          <span class="stat-label">Core Services</span>
+        </div>
+        <div class="stat-divider" aria-hidden="true"></div>
+        <div class="stat-item reveal-up" style="--delay:0.24s">
+          <div class="stat-num-wrap">
+            <span class="stat-number" data-count="2">0</span><span class="stat-suf">+</span>
+          </div>
+          <span class="stat-label">Years of Excellence</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider" aria-hidden="true"><span class="divider-line"></span></div>
+
+  <!-- ═══════════════════════════════════════════════
+       ABOUT
+  ═══════════════════════════════════════════════ -->
+  <section class="about section-spacing" id="about" aria-label="About TECHNEXT TECHNOLOGIES">
+    <div class="about-ambient" aria-hidden="true"></div>
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">Who We Are</span>
+        <h2 class="section-title">About TECHNEXT<br><em>TECHNOLOGIES</em></h2>
+      </div>
+
+      <div class="about-grid">
+        <!-- Visual card -->
+        <div class="about-visual reveal-left">
+          <div class="about-card-primary">
+            <div class="about-card-glow" aria-hidden="true"></div>
+            <div class="about-card-border" aria-hidden="true"></div>
+            <div class="about-card-body">
+              <div class="about-icon" aria-hidden="true">
+                <svg width="30" height="30" viewBox="0 0 30 30" fill="none">
+                  <rect x="3" y="3" width="24" height="24" rx="4"
+                        stroke="currentColor" stroke-width="1.5"/>
+                  <path d="M9 15l4 4 8-8" stroke="currentColor"
+                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <p class="about-card-year">Since 2024</p>
+              <p class="about-card-text">
+                Delivering creative and digital solutions across India with
+                excellence and precision.
+              </p>
+              <div class="about-card-tags">
+                <span>Design</span>
+                <span>Development</span>
+                <span>Marketing</span>
+              </div>
+            </div>
+          </div>
+          <div class="about-ornament" aria-hidden="true">
+            <span></span><span></span><span></span>
+          </div>
+        </div>
+
+        <!-- Content -->
+        <div class="about-body">
+          <p class="about-lead reveal-up">
+            TECHNEXT TECHNOLOGIES has been delivering creative and digital solutions
+            since 2024. We specialize in graphic designing, website development, and
+            advertising solutions, helping businesses build a strong and impactful
+            brand presence.
+          </p>
+
+          <div class="about-pillars">
+            <div class="about-pillar reveal-up" style="--delay:0.1s">
+              <div class="pillar-icon" aria-hidden="true">
+                <svg width="19" height="19" viewBox="0 0 19 19" fill="none">
+                  <path d="M9.5 1.5L12 7H17.5L13 10.5L14.5 16.5L9.5 13L4.5 16.5L6 10.5L1.5 7H7L9.5 1.5Z"
+                        stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="pillar-title">Our Mission</h3>
+                <p class="pillar-body">Transform ideas into visually compelling designs and powerful digital experiences. From eye-catching logos and social media creatives to responsive websites and result-driven advertising campaigns, we provide complete branding and marketing support tailored to every client's needs.</p>
+              </div>
+            </div>
+
+            <div class="about-pillar reveal-up" style="--delay:0.2s">
+              <div class="pillar-icon" aria-hidden="true">
+                <svg width="19" height="19" viewBox="0 0 19 19" fill="none">
+                  <circle cx="9.5" cy="9.5" r="7.5" stroke="currentColor" stroke-width="1.3"/>
+                  <path d="M6.5 9.5l2.5 2.5L13 7" stroke="currentColor"
+                        stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="pillar-title">Our Approach</h3>
+                <p class="pillar-body">We combine creativity, innovation, and technology to help brands stand out in today's competitive market. We focus on delivering solutions that are not only visually appealing but also strategically effective.</p>
+              </div>
+            </div>
+
+            <div class="about-pillar reveal-up" style="--delay:0.3s">
+              <div class="pillar-icon" aria-hidden="true">
+                <svg width="19" height="19" viewBox="0 0 19 19" fill="none">
+                  <path d="M2.5 9.5C2.5 5.91 5.41 3 9 3s6.5 2.91 6.5 6.5S12.59 16 9 16s-6.5-2.91-6.5-6.5z"
+                        stroke="currentColor" stroke-width="1.3"/>
+                  <path d="M9.5 6.5v3l2 2" stroke="currentColor"
+                        stroke-width="1.3" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="pillar-title">Our Commitment</h3>
+                <p class="pillar-body">Whether you are a startup, local business, or established company, we are committed to delivering high-quality solutions that drive growth, visibility, and long-term success.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-cta reveal-up" style="--delay:0.4s">
+            <p class="about-cta-text">Partner with us to bring your ideas to life.</p>
+            <a href="#contact" class="btn-outline touch-target">Let's Build Your Brand</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider" aria-hidden="true"><span class="divider-line"></span></div>
+
+  <!-- ═══════════════════════════════════════════════
+       SERVICES
+  ═══════════════════════════════════════════════ -->
+  <section class="services section-spacing" id="services" aria-label="Our Services">
+    <div class="services-bg" aria-hidden="true"></div>
+    <div class="container">
+      <div class="section-header section-header--center reveal-up">
+        <span class="section-tag">What We Do</span>
+        <h2 class="section-title">Our <em>Services</em></h2>
+        <p class="section-subtitle">We craft refined digital experiences and intelligent business solutions that elevate brands and drive measurable growth. Every service is designed with precision, innovation, and a deep understanding of modern business needs.</p>
+      </div>
+
+      <div class="services-grid">
+
+        <article class="service-card reveal-up" style="--delay:0.04s">
+          <div class="service-card-inner">
+            <div class="svc-bg" aria-hidden="true"></div>
+            <div class="svc-border-glow" aria-hidden="true"></div>
+            <div class="svc-num" aria-hidden="true">01</div>
+            <div class="svc-icon" aria-hidden="true">
+              <svg width="27" height="27" viewBox="0 0 27 27" fill="none">
+                <rect x="2" y="5" width="23" height="17" rx="2" stroke="currentColor" stroke-width="1.4"/>
+                <path d="M7 13H12M7 9.5H20M7 17H15" stroke="currentColor"
+                      stroke-width="1.4" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3 class="svc-title">Website Development</h3>
+            <p class="svc-body">We create sophisticated, high-performance websites that blend aesthetics with functionality. From business websites to e-commerce platforms, we deliver seamless user experiences.</p>
+            <div class="svc-line" aria-hidden="true"></div>
+          </div>
+        </article>
+
+        <article class="service-card reveal-up" style="--delay:0.08s">
+          <div class="service-card-inner">
+            <div class="svc-bg" aria-hidden="true"></div>
+            <div class="svc-border-glow" aria-hidden="true"></div>
+            <div class="svc-num" aria-hidden="true">02</div>
+            <div class="svc-icon" aria-hidden="true">
+              <svg width="27" height="27" viewBox="0 0 27 27" fill="none">
+                <rect x="4" y="4" width="19" height="19" rx="3" stroke="currentColor" stroke-width="1.4"/>
+                <path d="M8.5 10.5l3 3-3 3M14.5 16.5H18.5" stroke="currentColor"
+                      stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3 class="svc-title">Software Development</h3>
+            <p class="svc-body">Custom software solutions built for efficiency and scalability. Streamline your workflow and enhance productivity with tailored systems designed specifically for your business.</p>
+            <div class="svc-line" aria-hidden="true"></div>
+          </div>
+        </article>
+
+        <article class="service-card reveal-up" style="--delay:0.12s">
+          <div class="service-card-inner">
+            <div class="svc-bg" aria-hidden="true"></div>
+            <div class="svc-border-glow" aria-hidden="true"></div>
+            <div class="svc-num" aria-hidden="true">03</div>
+            <div class="svc-icon" aria-hidden="true">
+              <svg width="27" height="27" viewBox="0 0 27 27" fill="none">
+                <circle cx="13.5" cy="13.5" r="9.5" stroke="currentColor" stroke-width="1.4"/>
+                <ellipse cx="13.5" cy="13.5" rx="4.5" ry="9.5" stroke="currentColor" stroke-width="1.4"/>
+                <line x1="4" y1="13.5" x2="23" y2="13.5" stroke="currentColor"
+                      stroke-width="1.4" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3 class="svc-title">Digital Marketing</h3>
+            <p class="svc-body">Data-driven marketing strategies designed to increase visibility, engagement, and long-term business growth across digital platforms.</p>
+            <div class="svc-line" aria-hidden="true"></div>
+          </div>
+        </article>
+
+        <article class="service-card reveal-up" style="--delay:0.16s">
+          <div class="service-card-inner">
+            <div class="svc-bg" aria-hidden="true"></div>
+            <div class="svc-border-glow" aria-hidden="true"></div>
+            <div class="svc-num" aria-hidden="true">04</div>
+            <div class="svc-icon" aria-hidden="true">
+              <svg width="27" height="27" viewBox="0 0 27 27" fill="none">
+                <path d="M13.5 3.5L5.5 9.5V23.5H21.5V9.5L13.5 3.5Z"
+                      stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+                <path d="M9.5 23.5V16.5H17.5V23.5" stroke="currentColor"
+                      stroke-width="1.4" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3 class="svc-title">Branding &amp; Graphic Design</h3>
+            <p class="svc-body">We build strong brand identities through logos, visuals, and complete design systems that reflect clarity and premium quality.</p>
+            <div class="svc-line" aria-hidden="true"></div>
+          </div>
+        </article>
+
+        <article class="service-card reveal-up" style="--delay:0.2s">
+          <div class="service-card-inner">
+            <div class="svc-bg" aria-hidden="true"></div>
+            <div class="svc-border-glow" aria-hidden="true"></div>
+            <div class="svc-num" aria-hidden="true">05</div>
+            <div class="svc-icon" aria-hidden="true">
+              <svg width="27" height="27" viewBox="0 0 27 27" fill="none">
+                <rect x="2.5" y="5.5" width="22" height="16" rx="2" stroke="currentColor" stroke-width="1.4"/>
+                <path d="M10.5 13.5l5-3v6l-5-3Z" fill="currentColor"/>
+              </svg>
+            </div>
+            <h3 class="svc-title">Video Advertising</h3>
+            <p class="svc-body">High-quality video content that captures attention, communicates value, and strengthens your brand presence across platforms.</p>
+            <div class="svc-line" aria-hidden="true"></div>
+          </div>
+        </article>
+
+        <article class="service-card reveal-up" style="--delay:0.24s">
+          <div class="service-card-inner">
+            <div class="svc-bg" aria-hidden="true"></div>
+            <div class="svc-border-glow" aria-hidden="true"></div>
+            <div class="svc-num" aria-hidden="true">06</div>
+            <div class="svc-icon" aria-hidden="true">
+              <svg width="27" height="27" viewBox="0 0 27 27" fill="none">
+                <rect x="4" y="7" width="19" height="13" rx="3" stroke="currentColor" stroke-width="1.4"/>
+                <path d="M9.5 13.5H17.5M12.5 10.5V16.5" stroke="currentColor"
+                      stroke-width="1.4" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3 class="svc-title">Meta Advertising</h3>
+            <p class="svc-body">Targeted Facebook &amp; Instagram campaigns optimized for leads, conversions, and maximum ROI for your business.</p>
+            <div class="svc-line" aria-hidden="true"></div>
+          </div>
+        </article>
+
+        <article class="service-card reveal-up" style="--delay:0.28s">
+          <div class="service-card-inner">
+            <div class="svc-bg" aria-hidden="true"></div>
+            <div class="svc-border-glow" aria-hidden="true"></div>
+            <div class="svc-num" aria-hidden="true">07</div>
+            <div class="svc-icon" aria-hidden="true">
+              <svg width="27" height="27" viewBox="0 0 27 27" fill="none">
+                <rect x="4" y="4" width="19" height="19" rx="3" stroke="currentColor" stroke-width="1.4"/>
+                <path d="M7.5 11.5H19.5M7.5 15.5H15.5M7.5 7.5H13.5" stroke="currentColor"
+                      stroke-width="1.4" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3 class="svc-title">Billing Software &amp; POS Solutions</h3>
+            <p class="svc-body">Advanced billing systems with automation, real-time tracking, and smooth business management tools for modern enterprises.</p>
+            <div class="svc-line" aria-hidden="true"></div>
+          </div>
+        </article>
+
+        <article class="service-card reveal-up" style="--delay:0.32s">
+          <div class="service-card-inner">
+            <div class="svc-bg" aria-hidden="true"></div>
+            <div class="svc-border-glow" aria-hidden="true"></div>
+            <div class="svc-num" aria-hidden="true">08</div>
+            <div class="svc-icon" aria-hidden="true">
+              <svg width="27" height="27" viewBox="0 0 27 27" fill="none">
+                <path d="M13.5 3.5C7.977 3.5 3.5 7.977 3.5 13.5c0 2.69 1.066 5.13 2.8 6.92"
+                      stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+                <path d="M13.5 3.5c5.523 0 10 4.477 10 10 0 2.69-1.066 5.13-2.8 6.92"
+                      stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+                <path d="M13.5 7.5v6l3 3" stroke="currentColor"
+                      stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3 class="svc-title">Support &amp; Maintenance</h3>
+            <p class="svc-body">Dedicated support to ensure your systems remain secure, efficient, and future-ready — long after your project goes live.</p>
+            <div class="svc-line" aria-hidden="true"></div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider" aria-hidden="true"><span class="divider-line"></span></div>
+
+  <!-- ═══════════════════════════════════════════════
+       WHY TECHNEXT
+  ═══════════════════════════════════════════════ -->
+  <section class="why section-spacing" id="why" aria-label="Why TECHNEXT TECHNOLOGIES">
+    <div class="why-ambient" aria-hidden="true"></div>
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">Our Difference</span>
+        <h2 class="section-title">Why <em>TECHNEXT</em><br>TECHNOLOGIES</h2>
+      </div>
+
+      <div class="why-layout">
+        <div class="why-pillars">
+
+          <div class="why-pillar reveal-up" style="--delay:0.04s">
+            <div class="why-marker" aria-hidden="true">
+              <svg width="17" height="17" viewBox="0 0 17 17" fill="none">
+                <path d="M2.5 8.5l4.5 4.5 7.5-9" stroke="currentColor"
+                      stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div>
+              <h3>Tailored, High-Performance Solutions</h3>
+              <p>Every project we take on is custom-built to meet your exact business needs — no cookie-cutter templates, no shortcuts.</p>
+            </div>
+          </div>
+
+          <div class="why-pillar reveal-up" style="--delay:0.1s">
+            <div class="why-marker" aria-hidden="true">
+              <svg width="17" height="17" viewBox="0 0 17 17" fill="none">
+                <path d="M2.5 8.5l4.5 4.5 7.5-9" stroke="currentColor"
+                      stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div>
+              <h3>Elegant &amp; Modern Design Approach</h3>
+              <p>We believe great design is more than aesthetics — it's communication. Our work is refined, purposeful, and built to impress.</p>
+            </div>
+          </div>
+
+          <div class="why-pillar reveal-up" style="--delay:0.16s">
+            <div class="why-marker" aria-hidden="true">
+              <svg width="17" height="17" viewBox="0 0 17 17" fill="none">
+                <path d="M2.5 8.5l4.5 4.5 7.5-9" stroke="currentColor"
+                      stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div>
+              <h3>Technology-Driven Strategy</h3>
+              <p>We stay ahead of the curve, leveraging the latest technologies to deliver solutions that are smart, scalable, and future-proof.</p>
+            </div>
+          </div>
+
+          <div class="why-pillar reveal-up" style="--delay:0.22s">
+            <div class="why-marker" aria-hidden="true">
+              <svg width="17" height="17" viewBox="0 0 17 17" fill="none">
+                <path d="M2.5 8.5l4.5 4.5 7.5-9" stroke="currentColor"
+                      stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div>
+              <h3>Reliable Long-Term Support</h3>
+              <p>Our relationship doesn't end at launch. We provide ongoing support and maintenance to keep your business running at its best.</p>
+            </div>
+          </div>
+
+          <div class="why-pillar reveal-up" style="--delay:0.28s">
+            <div class="why-marker" aria-hidden="true">
+              <svg width="17" height="17" viewBox="0 0 17 17" fill="none">
+                <path d="M2.5 8.5l4.5 4.5 7.5-9" stroke="currentColor"
+                      stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div>
+              <h3>Commitment to Excellence</h3>
+              <p>We don't settle for good — we pursue excellence in every deliverable, ensuring every client gets our best work, every time.</p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="why-visual reveal-right">
+          <div class="why-card">
+            <div class="why-card-glow" aria-hidden="true"></div>
+            <div class="why-card-mesh" aria-hidden="true"></div>
+            <div class="why-card-body">
+              <blockquote class="why-quote">
+                "We combine creativity, innovation, and technology to help brands
+                stand out in today's competitive market."
+              </blockquote>
+              <hr class="why-hr" aria-hidden="true">
+              <div class="why-metrics">
+                <div class="wmetric">
+                  <div class="wm-num">
+                    <span data-count="100">0</span><span class="wm-sym">%</span>
+                  </div>
+                  <span class="wm-label">Client Satisfaction</span>
+                </div>
+                <div class="wmetric">
+                  <div class="wm-num">
+                    <span data-count="50">0</span><span class="wm-sym">+</span>
+                  </div>
+                  <span class="wm-label">Projects Completed</span>
+                </div>
+              </div>
+              <a href="https://sites.google.com/view/technexttechnologies/appointment_1?authuser=0"
+                 class="why-cta touch-target" target="_blank" rel="noopener noreferrer">
+                Start Your Project
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                  <path d="M2 7h10M12 7l-4-4M12 7l-4 4" stroke="currentColor"
+                        stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider" aria-hidden="true"><span class="divider-line"></span></div>
+
+  <!-- ═══════════════════════════════════════════════
+       CONTACT
+  ═══════════════════════════════════════════════ -->
+  <section class="contact section-spacing" id="contact" aria-label="Contact TECHNEXT TECHNOLOGIES">
+    <div class="contact-ambient" aria-hidden="true"></div>
+    <div class="container">
+      <div class="section-header section-header--center reveal-up">
+        <span class="section-tag">Reach Out</span>
+        <h2 class="section-title">Get In <em>Touch</em></h2>
+        <p class="section-subtitle">For service enquiries, project discussions, or technical assistance, please reach out to us through the following channels.</p>
+      </div>
+
+      <div class="contact-layout">
+
+        <!-- Info panel -->
+        <div class="contact-info reveal-left">
+          <h3 class="contact-company">TECHNEXT TECHNOLOGIES</h3>
+
+          <ul class="contact-details" role="list">
+            <li class="cd-item">
+              <div class="cd-icon" aria-hidden="true">
+                <svg width="17" height="17" viewBox="0 0 17 17" fill="none">
+                  <rect x="2.5" y="3.5" width="12" height="10" rx="1.5" stroke="currentColor" stroke-width="1.3"/>
+                  <path d="M2.5 6.5l6 4 6-4" stroke="currentColor" stroke-width="1.3"/>
+                </svg>
+              </div>
+              <div>
+                <span class="cd-label">Email</span>
+                <a href="mailto:info.technexttech@gmail.com"
+                   class="cd-value">info.technexttech@gmail.com</a>
+                <a href="mailto:technexttechnologies@gmail.com"
+                   class="cd-value">technexttechnologies@gmail.com</a>
+              </div>
+            </li>
+            <li class="cd-item">
+              <div class="cd-icon" aria-hidden="true">
+                <svg width="17" height="17" viewBox="0 0 17 17" fill="none">
+                  <circle cx="8.5" cy="8.5" r="6" stroke="currentColor" stroke-width="1.3"/>
+                  <path d="M8.5 5.5v3l2 2" stroke="currentColor"
+                        stroke-width="1.3" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <div>
+                <span class="cd-label">Working Hours</span>
+                <span class="cd-value">Monday – Saturday: 9:00 AM – 7:00 PM</span>
+                <span class="cd-value">Sunday: Closed</span>
+              </div>
+            </li>
+            <li class="cd-item">
+              <div class="cd-icon" aria-hidden="true">
+                <svg width="17" height="17" viewBox="0 0 17 17" fill="none">
+                  <circle cx="8.5" cy="8.5" r="6" stroke="currentColor" stroke-width="1.3"/>
+                  <ellipse cx="8.5" cy="8.5" rx="2.8" ry="6" stroke="currentColor" stroke-width="1.3"/>
+                  <line x1="2.5" y1="8.5" x2="14.5" y2="8.5" stroke="currentColor"
+                        stroke-width="1.3" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <div>
+                <span class="cd-label">Website</span>
+                <a href="https://www.technexttechnologies.in"
+                   class="cd-value" target="_blank" rel="noopener noreferrer">
+                  www.technexttechnologies.in
+                </a>
+              </div>
+            </li>
+          </ul>
+
+          <ul class="contact-commits" role="list">
+            <li>
+              <svg width="15" height="15" viewBox="0 0 15 15" fill="none" aria-hidden="true">
+                <path d="M2 7.5l3.5 3.5 7.5-8" stroke="currentColor"
+                      stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              Timely and Professional Communication
+            </li>
+            <li>
+              <svg width="15" height="15" viewBox="0 0 15 15" fill="none" aria-hidden="true">
+                <path d="M2 7.5l3.5 3.5 7.5-8" stroke="currentColor"
+                      stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              Customized Business Solutions
+            </li>
+            <li>
+              <svg width="15" height="15" viewBox="0 0 15 15" fill="none" aria-hidden="true">
+                <path d="M2 7.5l3.5 3.5 7.5-8" stroke="currentColor"
+                      stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              Dedicated Client Support
+            </li>
+            <li>
+              <svg width="15" height="15" viewBox="0 0 15 15" fill="none" aria-hidden="true">
+                <path d="M2 7.5l3.5 3.5 7.5-8" stroke="currentColor"
+                      stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              Transparent and Reliable Service
+            </li>
+          </ul>
+
+          <div class="contact-cta-row">
+            <a href="https://sites.google.com/view/technexttechnologies/appointment_1?authuser=0"
+               class="btn-primary touch-target" target="_blank" rel="noopener noreferrer">
+              <span>Book Appointment</span>
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                <path d="M2 7h10M12 7l-4-4M12 7l-4 4" stroke="currentColor"
+                      stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+            <a href="mailto:info.technexttech@gmail.com" class="btn-outline touch-target">Email Us</a>
+          </div>
+        </div>
+
+        <!-- ── FORM (FormSubmit.co) ── -->
+        <div class="contact-form-wrap reveal-right">
+          <div class="form-glass-bg" aria-hidden="true"></div>
+
+          <!--
+            FormSubmit configuration:
+            • _next       : redirects to #contact after submit (same-page anchor)
+            • _subject    : email subject line
+            • _captcha    : disabled — spam controlled by honeypot + _template
+            • _template   : plain email template
+            • _honey      : honeypot anti-spam field (hidden)
+            • _autoresponse: disabled to avoid extra config
+          -->
+          <form
+            class="contact-form"
+            id="contactForm"
+            action="https://formsubmit.co/info.technexttech@gmail.com"
+            method="POST"
+            novalidate
+            aria-label="Contact form"
+          >
+            <!-- FormSubmit hidden controls -->
+            <input type="hidden" name="_subject"  value="New Enquiry from TECHNEXT Website" />
+            <input type="hidden" name="_captcha"  value="false" />
+            <input type="hidden" name="_template" value="table" />
+            <input type="hidden" name="_next"     value="https://www.technexttechnologies.in/#contact" />
+            <!-- Honeypot -->
+            <input type="text"   name="_honey"    style="display:none" tabindex="-1" autocomplete="off" />
+
+            <p class="form-intro">Connect with TECHNEXT TECHNOLOGIES to discuss your requirements and discover how we can add value to your business.</p>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="formName" class="form-label">Full Name <span aria-hidden="true">*</span></label>
+                <input type="text"  id="formName"  name="name"    class="form-input"
+                       placeholder="Your full name" required autocomplete="name" />
+                <div class="form-err" id="nameError" role="alert" aria-live="polite"></div>
+              </div>
+              <div class="form-group">
+                <label for="formEmail" class="form-label">Email Address <span aria-hidden="true">*</span></label>
+                <input type="email" id="formEmail" name="email"   class="form-input"
+                       placeholder="your@email.com" required autocomplete="email" />
+                <div class="form-err" id="emailError" role="alert" aria-live="polite"></div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="formPhone" class="form-label">Phone Number</label>
+              <input type="tel" id="formPhone" name="phone" class="form-input"
+                     placeholder="+91 XXXXX XXXXX" autocomplete="tel" />
+            </div>
+
+            <div class="form-group">
+              <label for="formMessage" class="form-label">Message <span aria-hidden="true">*</span></label>
+              <textarea id="formMessage" name="message" class="form-textarea"
+                        placeholder="Tell us about your project or enquiry…"
+                        rows="5" required></textarea>
+              <div class="form-err" id="messageError" role="alert" aria-live="polite"></div>
+            </div>
+
+            <button type="submit" class="form-submit touch-target" id="formSubmit">
+              <span class="submit-text">Send Enquiry</span>
+              <svg class="submit-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                <path d="M2 8h12M14 8l-4-4M14 8l-4 4" stroke="currentColor"
+                      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <span class="submit-loader" aria-hidden="true"></span>
+            </button>
+
+            <div class="form-feedback form-feedback--success" id="formSuccess"
+                 role="status" aria-live="polite" hidden>
+              <svg width="19" height="19" viewBox="0 0 19 19" fill="none" aria-hidden="true">
+                <path d="M3.5 9.5l4.5 4.5 7-9" stroke="currentColor"
+                      stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              Your enquiry was sent successfully. We'll be in touch shortly!
+            </div>
+
+            <div class="form-feedback form-feedback--error" id="formError"
+                 role="alert" aria-live="polite" hidden>
+              <svg width="19" height="19" viewBox="0 0 19 19" fill="none" aria-hidden="true">
+                <circle cx="9.5" cy="9.5" r="7" stroke="currentColor" stroke-width="1.5"/>
+                <path d="M9.5 6v4M9.5 12.5v.5" stroke="currentColor"
+                      stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+              Something went wrong. Please try again or email us directly at
+              <a href="mailto:info.technexttech@gmail.com">info.technexttech@gmail.com</a>
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════════════ -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer-gradient-bar" aria-hidden="true"></div>
+    <div class="footer-body">
+      <div class="container">
+        <div class="footer-grid">
+
+          <div class="footer-brand">
+            <a href="#home" class="footer-logo-link" aria-label="TECHNEXT TECHNOLOGIES — scroll to top">
+              <img
+                src="https://res.cloudinary.com/dwzerbhuj/image/upload/q_auto/f_auto/v1776917252/Untitled-2_gx7mta.png"
+                alt="TECHNEXT TECHNOLOGIES"
+                class="footer-logo-img"
+                width="148"
+                loading="lazy"
+                decoding="async"
+              />
+            </a>
+            <p class="footer-tagline">
+              Crafting refined digital experiences and intelligent business solutions.
+            </p>
+          </div>
+
+          <div class="footer-col">
+            <h4 class="footer-col-title">Quick Links</h4>
+            <ul role="list">
+              <li><a href="#home"     class="footer-link">Home</a></li>
+              <li><a href="#about"    class="footer-link">About Us</a></li>
+              <li><a href="#services" class="footer-link">Services</a></li>
+              <li><a href="#why"      class="footer-link">Why TECHNEXT</a></li>
+              <li><a href="#contact"  class="footer-link">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4 class="footer-col-title">Company</h4>
+            <ul role="list">
+              <li>
+                <a href="https://sites.google.com/view/technexttechnologies/appointment_1?authuser=0"
+                   class="footer-link" target="_blank" rel="noopener noreferrer">Appointment</a>
+              </li>
+              <li>
+                <a href="https://sites.google.com/view/technexttechnologies/staff-login?authuser=0"
+                   class="footer-link" target="_blank" rel="noopener noreferrer">Staff Login</a>
+              </li>
+              <li>
+                <a href="https://www.technexttechnologies.in"
+                   class="footer-link" target="_blank" rel="noopener noreferrer">Visit Website</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4 class="footer-col-title">Contact</h4>
+            <ul role="list">
+              <li>
+                <a href="mailto:info.technexttech@gmail.com"
+                   class="footer-link">info.technexttech@gmail.com</a>
+              </li>
+              <li>
+                <a href="mailto:technexttechnologies@gmail.com"
+                   class="footer-link">technexttechnologies@gmail.com</a>
+              </li>
+              <li><span class="footer-detail">Mon – Sat: 9 AM – 7 PM</span></li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="footer-btm-row">
+          <p class="footer-copy">&copy; 2026 TECHNEXT TECHNOLOGIES. All Rights Reserved.</p>
+          <a href="#home" class="footer-totop" aria-label="Back to top">
+            <svg width="15" height="15" viewBox="0 0 15 15" fill="none" aria-hidden="true">
+              <path d="M7.5 12V3M3.5 7l4-4 4 4" stroke="currentColor"
+                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Back to top
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
