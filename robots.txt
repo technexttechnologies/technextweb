@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+Allow: /style.css
+Allow: /script.js
+
+# Block specific search engines that do not honor crawling policies properly or drain server resources
+User-agent: Baiduspider
+Disallow: /
+User-agent: YandexBot
+Disallow: /
+
+Sitemap: https://www.technexttechnologies.in/sitemap.xml
