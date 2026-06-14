@@ -384,4 +384,108 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
+  /* ────────────────────────────────────────
+     AI CHATBOT LOGIC
+  ──────────────────────────────────────── */
+  const chatBtn = document.getElementById('chatbotBtn');
+  const chatWin = document.getElementById('chatbotWindow');
+  const chatClose = document.getElementById('chatbotClose');
+  const chatInput = document.getElementById('chatInput');
+  const chatSend = document.getElementById('chatSend');
+  const chatMsgs = document.getElementById('chatbotMessages');
+  const chatChips = document.getElementById('chatbotChips');
+
+  if (chatBtn && chatWin) {
+    // Open/Close
+    chatBtn.addEventListener('click', () => chatWin.classList.add('is-open'));
+    chatClose.addEventListener('click', () => chatWin.classList.remove('is-open'));
+
+    const addMessage = (text, isUser = false) => {
+      // Remove typing indicator if exists
+      const typingInd = document.getElementById('chatTyping');
+      if (typingInd) typingInd.remove();
+
+      const div = document.createElement('div');
+      div.className = `chat-msg ${isUser ? 'user-msg' : 'bot-msg'}`;
+      div.innerHTML = text;
+      
+      // Insert before chips if they exist
+      if (chatChips && !isUser) {
+        chatMsgs.insertBefore(div, chatChips);
+      } else {
+        chatMsgs.appendChild(div);
+        if (chatChips) chatMsgs.appendChild(chatChips); // Push chips to bottom
+      }
+      chatMsgs.scrollTop = chatMsgs.scrollHeight;
+    };
+
+    const showTyping = () => {
+      const div = document.createElement('div');
+      div.id = 'chatTyping';
+      div.className = 'chat-msg bot-msg chat-typing';
+      div.innerHTML = '<span></span><span></span><span></span>';
+      if (chatChips) chatMsgs.insertBefore(div, chatChips);
+      else chatMsgs.appendChild(div);
+      chatMsgs.scrollTop = chatMsgs.scrollHeight;
+    };
+
+    // Dictionary of responses
+    const botBrain = {
+      'website': "We build premium, high-performance websites and E-commerce platforms. Are you looking to build a new website or redesign an existing one?",
+      'marketing': "Our Digital Marketing services include SEO, Meta Advertising, and Social Media Marketing to drive measurable growth.",
+      'seo': "We offer advanced SEO services to help you rank higher on Google and dominate your local market.",
+      'app': "We develop custom Mobile Apps tailored to your business needs, focusing on smooth UI/UX and scalability.",
+      'software': "We specialize in Custom Software Development, including ERP and CRM solutions to streamline your workflow.",
+      'billing': "We provide robust POS and GST Billing Software to automate your business operations seamlessly.",
+      'pos': "Our POS systems are designed for retail and restaurants, offering inventory management and fast billing.",
+      'quote': "I can help connect you with our team for a custom quote!",
+      'contact': "You can reach us at info.technexttech@gmail.com or use the contact form on our site. I can also connect you to our WhatsApp!",
+      'hi': "Hello! How can I help you today?",
+      'hello': "Hi there! What can I assist you with?",
+      'default': "That sounds interesting! I'm a simple AI assistant, so I might not have all the specific details. Need help from our team? Chat with us on WhatsApp."
+    };
+
+    const getBotResponse = (input) => {
+      input = input.toLowerCase();
+      for (const key in botBrain) {
+        if (input.includes(key) && key !== 'default') return botBrain[key];
+      }
+      return botBrain['default'];
+    };
+
+    const handleSend = () => {
+      const text = chatInput.value.trim();
+      if (!text) return;
+      
+      chatInput.value = '';
+      addMessage(text, true);
+      showTyping();
+
+      setTimeout(() => {
+        let reply = getBotResponse(text);
+        
+        // Add WhatsApp Escalation if needed
+        if (reply === botBrain['quote'] || reply === botBrain['default']) {
+          const waMsg = encodeURIComponent("Hello TechNext Technologies, I would like to know more about your services.");
+          reply += `<br><br><a href="https://wa.me/919446540984?text=${waMsg}" target="_blank" class="chat-link">💬 Chat on WhatsApp</a>`;
+        }
+        
+        addMessage(reply, false);
+      }, 800 + Math.random() * 500); // realistic typing delay
+    };
+
+    chatSend.addEventListener('click', handleSend);
+    chatInput.addEventListener('keypress', (e) => { if (e.key === 'Enter') handleSend(); });
+
+    // Handle Quick Chips
+    if (chatChips) {
+      document.querySelectorAll('.chat-chip').forEach(chip => {
+        chip.addEventListener('click', () => {
+          chatInput.value = chip.textContent;
+          handleSend();
+        });
+      });
+    }
+  }
+
 }); // end DOMContentLoaded
