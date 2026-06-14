@@ -394,11 +394,25 @@ document.addEventListener('DOMContentLoaded', () => {
   const chatSend = document.getElementById('chatSend');
   const chatMsgs = document.getElementById('chatbotMessages');
   const chatChips = document.getElementById('chatbotChips');
+  const mobChatBtn = document.getElementById('mobChatBtn');
+  const mobOverlay = document.getElementById('mobileOverlay');
+  const navToggle = document.getElementById('navToggle');
 
   if (chatBtn && chatWin) {
     // Open/Close
-    chatBtn.addEventListener('click', () => chatWin.classList.add('is-open'));
+    const openChat = () => {
+      chatWin.classList.add('is-open');
+      // If mobile menu is open, close it
+      if (mobOverlay && mobOverlay.classList.contains('is-active')) {
+        mobOverlay.classList.remove('is-active');
+        if(navToggle) navToggle.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+      }
+    };
+    
+    chatBtn.addEventListener('click', openChat);
     chatClose.addEventListener('click', () => chatWin.classList.remove('is-open'));
+    if (mobChatBtn) mobChatBtn.addEventListener('click', openChat);
 
     const addMessage = (text, isUser = false) => {
       // Remove typing indicator if exists
