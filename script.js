@@ -387,6 +387,11 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ────────────────────────────────────────
      AI CHATBOT LOGIC
   ──────────────────────────────────────── */
+  const chatContainer = document.getElementById('chatbotContainer');
+  if (window.innerWidth <= 768 && chatContainer) {
+    chatContainer.remove(); // Completely destroy from DOM on mobile
+  }
+
   const chatBtn = document.getElementById('chatbotBtn');
   const chatWin = document.getElementById('chatbotWindow');
   const chatClose = document.getElementById('chatbotClose');
