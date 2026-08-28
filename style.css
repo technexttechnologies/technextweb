@@ -616,16 +616,20 @@ body.loading{overflow:hidden}
              radial-gradient(ellipse 45% 40% at 10% 80%,rgba(79,70,229,.045) 0%,transparent 60%);
 }
 .svc-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,285px),1fr));gap:1.125rem}
-.svc-card{position:relative}
+.svc-card{position:relative; perspective: 1200px;}
 .svc-inner{
   position:relative;
   background:rgba(15,23,42,.4);border:1px solid rgba(255,255,255,.04);
   border-radius:var(--r-lg);padding:3rem 2.25rem;height:100%;
-  overflow:hidden;display:flex;flex-direction:column;gap:1.25rem;
+  display:flex;flex-direction:column;gap:1.25rem;
   transition:transform .4s var(--ease-out),box-shadow .4s,border-color .3s, background .4s;
   backdrop-filter:blur(16px);
+  transform-style: preserve-3d;
+  will-change: transform;
 }
-.svc-inner:hover{transform:translateY(-6px);box-shadow:var(--sh-card);border-color:rgba(255,255,255,.1);background:rgba(15,23,42,.6)}
+.svc-inner:hover{box-shadow:var(--sh-card);border-color:rgba(255,255,255,.15);background:rgba(15,23,42,.6)}
+.svc-inner > * { transform: translateZ(25px); transition: transform 0.3s ease; }
+.svc-inner .svc-shine, .svc-inner .svc-bar { transform: translateZ(0); }
 .svc-shine{
   position:absolute;inset:0;
   background:radial-gradient(ellipse 80% 50% at 50% -10%,rgba(37,99,235,.06) 0%,transparent 70%);

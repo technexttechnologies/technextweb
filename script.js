@@ -379,9 +379,44 @@ document.addEventListener('DOMContentLoaded', () => {
       const line = el.querySelector('.divider-line');
       if (line) { line.style.transform = 'scaleX(.3)'; line.style.opacity = '0'; line.style.transition = 'transform .8s var(--ease-out), opacity .8s ease'; }
       dividerIO.observe(el);
+    });  }
+
+  /* ────────────────────────────────────────
+     SERVICE CARD 3D CINEMATIC ANIMATION
+  ──────────────────────────────────────── */
+  const svcCards = document.querySelectorAll('.svc-card');
+  svcCards.forEach(card => {
+    const inner = card.querySelector('.svc-inner');
+    if (!inner) return;
+
+    // Detect mobile touch devices to disable 3D on them
+    const isTouch = window.matchMedia("(pointer: coarse)").matches;
+    if (isTouch) return;
+
+    card.addEventListener('mousemove', e => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      
+      const centerX = rect.width / 2;
+      const centerY = rect.height / 2;
+      
+      // Calculate rotation (-12 to 12 degrees)
+      const rotateX = ((y - centerY) / centerY) * -12;
+      const rotateY = ((x - centerX) / centerX) * 12;
+      
+      inner.style.transition = 'none';
+      inner.style.transform = `scale3d(1.02, 1.02, 1.02) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
     });
-  }
 
-
+    card.addEventListener('mouseleave', () => {
+      inner.style.transition = 'transform 0.6s cubic-bezier(0.25, 1, 0.5, 1)';
+      inner.style.transform = 'scale3d(1, 1, 1) rotateX(0) rotateY(0)';
+    });
+    
+    card.addEventListener('mouseenter', () => {
+      inner.style.transition = 'transform 0.2s cubic-bezier(0.25, 1, 0.5, 1)';
+    });
+  });
 
 }); // end DOMContentLoaded
